@@ -26,6 +26,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // --------------------------------------------------------------------------- Routes for Car Builder
 Route::get('/builder', 'App\Http\Controllers\Builder\BuilderController@index')->name('builder');
 
+// --------------------------------------------------------------------------- Routes for Parts
+Route::get('/api/parts', 'App\Http\Controllers\APIController@index')->name('api.parts');
+Route::get('/api/parts/cars', 'App\Http\Controllers\APIController@cars')->name('api.parts.cars');
+
 
 
 

@@ -25,7 +25,7 @@
             <div class="card">
                 <div class="card-header">Pick a Car:</div>
                 <div class="card-body">
-                    {{-- Display Car parts that are category type 'Car' here --}}
+                    <Car-Component></Car-Component>
                 </div>
             </div>
         </div>
