@@ -32,7 +32,7 @@ Route::get('/admin/add', 'App\Http\Controllers\PartController@index')->name('par
 
 // Route::get('/admin/edit/{id}', 'PartController@edit')->name('parts.edit');
 
-Route::put('/admin/update', 'Admin\PartController@update')->name('parts.update');
+Route::put('/update', 'Admin\PartController@update')->name('parts.update');
 
 // Route::post('/admin/add', 'App\Http\Controllers\CarBuilderController@store')->name('admin.store');
 

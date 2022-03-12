@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Part;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PartController extends Controller
 {
@@ -73,7 +74,11 @@ class PartController extends Controller
      */
     public function update(Request $request, Part $part)
     {
-        //
+        $part->part_name = $request->part_name;
+        $part->part_description = $request->part_description;
+        $part->part_category = $request->part_category;
+        $part->save();
+        return redirect()->route('admin.parts.index');
     }
 
     /**

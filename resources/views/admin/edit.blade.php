@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Edit part: {{ $part->part_name }}</div>
                 <div class="card-body">
-                    <form action="{{ route('parts.update'), $part }}" method="post">
+                    <form action="{{ route('parts.update', $part) }}" method="post">
                         {{ method_field('put') }}
                         @csrf
                         <input type="hidden" name="id" value="{{ $part->id }}">
