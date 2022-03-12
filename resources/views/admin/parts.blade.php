@@ -26,7 +26,7 @@
                                         {{-- <td>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</td> --}}
                                         <td>
                                         <a href="{{ route('parts.edit', $part->id )}}"><button class="btn btn-info text-white float-left mr-2" type="submit">Edit</button></a>
-                                        <form action="{{ route('parts.destroy', $part)}}" method="post" class="float-left">
+                                        <form action="{{ route('parts.destroy', $part)}}" method="post" class="float-left" style="display: inline">
                                             {{ method_field('DELETE')}}
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $part->id }}">

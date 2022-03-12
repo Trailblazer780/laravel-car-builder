@@ -25,7 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/carbuilder/car-builder', 'App\Http\Controllers\CarBuilderController@index')->name('carbuilder.car-builder');
 
 
-// Routes for part CRUD
+// --------------------------------------------------------------------------- Routes for part CRUD
 Route::get('/admin/add', 'Admin\PartController@create')->name('parts.add');
 Route::put('/admin/update/{part}', 'Admin\PartController@update')->name('parts.update');
 Route::post('/admin/add', 'Admin\PartController@store')->name('parts.store');
