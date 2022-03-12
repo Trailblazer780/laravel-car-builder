@@ -27,10 +27,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Routes for part CRUD
 Route::get('/admin/add', 'Admin\PartController@create')->name('parts.add');
-Route::put('/admin/update', 'Admin\PartController@update')->name('parts.update');
+Route::put('/admin/update/{part}', 'Admin\PartController@update')->name('parts.update');
 Route::post('/admin/add', 'Admin\PartController@store')->name('parts.store');
 Route::get('/admin/edit/{part}', 'Admin\PartController@edit')->name('parts.edit');
-Route::delete('/admin/destroy', 'Admin\PartController@destroy')->name('parts.destroy');
+Route::delete('/admin/destroy/{part}', 'Admin\PartController@destroy')->name('parts.destroy');
 
 
 // ----------------------------------------------------------------------------- User Management

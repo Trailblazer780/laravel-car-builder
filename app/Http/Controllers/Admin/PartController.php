@@ -65,8 +65,6 @@ class PartController extends Controller
      */
     public function edit(Part $part)
     {
-        // $part = DB::table('parts')->where('id', $part->id)->first();
-        // return view with specific part data
         return view('admin.edit')->with(['part' => $part]);
     }
 
