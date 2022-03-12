@@ -26,15 +26,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Route::get('/admin/parts', 'App\Http\Controllers\CarBuilderController@parts')->name('admin.parts');
 
-Route::get('/admin/add', 'App\Http\Controllers\PartController@index')->name('parts.add');
 
 // create route to edit speicifc part
 
 // Route::get('/admin/edit/{id}', 'PartController@edit')->name('parts.edit');
 
-Route::put('/update', 'Admin\PartController@update')->name('parts.update');
+Route::get('/admin/add', 'Admin\PartController@create')->name('parts.add');
+Route::put('/admin/update', 'Admin\PartController@update')->name('parts.update');
 
-// Route::post('/admin/add', 'App\Http\Controllers\CarBuilderController@store')->name('admin.store');
+Route::post('/admin/add', 'Admin\PartController@store')->name('admin.store');
 
 Route::delete('/admin/destroy', 'Admin\App\Http\Controllers\PartController@destroy')->name('parts.destroy');
 

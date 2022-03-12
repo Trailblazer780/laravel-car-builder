@@ -27,7 +27,7 @@ class PartController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.add');
     }
 
     /**
@@ -38,7 +38,12 @@ class PartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $part = new Part();
+        $part->part_name = request('part_name');
+        $part->part_description = request('part_description');
+        $part->part_category = request('part_category');
+        $part->save();
+        return redirect()->route('admin.parts.index');
     }
 
     /**
