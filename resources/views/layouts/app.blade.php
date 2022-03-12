@@ -26,7 +26,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <a class="navbar-brand" href="{{ url('/carbuilder/car-builder') }}">
+                <a class="navbar-brand" href="{{ url('/builder') }}">
                     {{ config('Builder', 'Builder') }}
                 </a>
                 <a class="navbar-brand" href="{{ url('/admin/parts') }}">

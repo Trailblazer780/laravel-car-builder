@@ -22,7 +22,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // make route to car-builder
-// Route::get('/carbuilder/car-builder', 'App\Http\Controllers\CarBuilderController@index')->name('carbuilder.car-builder');
+
+// --------------------------------------------------------------------------- Routes for Car Builder
+Route::get('/builder', 'App\Http\Controllers\Builder\BuilderController@index')->name('builder');
+
+
 
 
 // --------------------------------------------------------------------------- Routes for part CRUD
@@ -31,7 +35,6 @@ Route::put('/admin/update/{part}', 'Admin\PartController@update')->name('parts.u
 Route::post('/admin/add', 'Admin\PartController@store')->name('parts.store');
 Route::get('/admin/edit/{part}', 'Admin\PartController@edit')->name('parts.edit');
 Route::delete('/admin/destroy/{part}', 'Admin\PartController@destroy')->name('parts.destroy');
-
 
 // ----------------------------------------------------------------------------- User Management
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
