@@ -29,6 +29,11 @@ Route::get('/builder', 'App\Http\Controllers\Builder\BuilderController@index')->
 // --------------------------------------------------------------------------- Routes for Parts
 Route::get('/api/parts', 'App\Http\Controllers\APIController@index')->name('api.parts');
 Route::get('/api/parts/cars', 'App\Http\Controllers\APIController@cars')->name('api.parts.cars');
+Route::get('/api/parts/engine', 'App\Http\Controllers\APIController@engine')->name('api.parts.engine');
+Route::get('/api/parts/brakes', 'App\Http\Controllers\APIController@brakes')->name('api.parts.brakes');
+Route::get('/api/parts/suspension', 'App\Http\Controllers\APIController@suspension')->name('api.parts.suspension');
+Route::get('/api/parts/body', 'App\Http\Controllers\APIController@body')->name('api.parts.body');
+Route::get('/api/parts/exhaust', 'App\Http\Controllers\APIController@exhaust')->name('api.parts.exhaust');
 
 
 
