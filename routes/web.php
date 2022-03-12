@@ -14,14 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('builder.builder');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// make route to car-builder
 
 // --------------------------------------------------------------------------- Routes for Car Builder
 Route::get('/builder', 'App\Http\Controllers\Builder\BuilderController@index')->name('builder');
@@ -34,8 +32,7 @@ Route::get('/api/parts/brakes', 'App\Http\Controllers\APIController@brakes')->na
 Route::get('/api/parts/suspension', 'App\Http\Controllers\APIController@suspension')->name('api.parts.suspension');
 Route::get('/api/parts/body', 'App\Http\Controllers\APIController@body')->name('api.parts.body');
 Route::get('/api/parts/exhaust', 'App\Http\Controllers\APIController@exhaust')->name('api.parts.exhaust');
-
-
+Route::get('/api/parts/transmission', 'App\Http\Controllers\APIController@transmission')->name('api.parts.transmission');
 
 
 // --------------------------------------------------------------------------- Routes for part CRUD

@@ -21,6 +21,12 @@ window.Vue = require('vue').default;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('car-component', require('./components/CarComponent.vue').default);
+Vue.component('engine-component', require('./components/EngineComponent.vue').default);
+Vue.component('transmission-component', require('./components/TransmissionComponent.vue').default);
+Vue.component('suspension-component', require('./components/SuspensionComponent.vue').default);
+Vue.component('exhaust-component', require('./components/ExhaustComponent.vue').default);
+Vue.component('body-component', require('./components/BodyComponent.vue').default);
+Vue.component('brake-component', require('./components/BrakeComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

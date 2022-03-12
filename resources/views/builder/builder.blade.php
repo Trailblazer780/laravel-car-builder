@@ -5,7 +5,7 @@
     <div class="col-md-4">
     <form action="" method="POST">
         @csrf
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
                 <div class="card-header">Who is this build for?</div>
                 <div class="card-body">
@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
                 <div class="card-header">Pick a Car:</div>
                 <div class="card-body">
@@ -29,51 +29,51 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
                 <div class="card-header">Engine Mods:</div>
                 <div class="card-body">
-                    {{-- Display Car parts that are category type 'Engine' here --}}
+                    <Engine-Component></Engine-Component>
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
                 <div class="card-header">Body Mods:</div>
                 <div class="card-body">
-                    {{-- Display Car parts that are category type 'Body' here --}}
+                    <Body-Component></Body-Component>
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
                 <div class="card-header">Suspension Mods:</div>
                 <div class="card-body">
-                    {{-- Display Car parts that are category type 'Suspension' here --}}
+                    <Suspension-Component></Suspension-Component>
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
                 <div class="card-header">Brake Mods:</div>
                 <div class="card-body">
-                    {{-- Display Car parts that are category type 'Breaks' here --}}
+                    <Brake-Component></Brake-Component>
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
                 <div class="card-header">Transmission Mods:</div>
                 <div class="card-body">
-                    {{-- Display Car parts that are category type 'Transmission' here --}}
+                    <Transmission-Component></Transmission-Component>
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
                 <div class="card-header">Exhaust Mods:</div>
                 <div class="card-body">
-                    {{-- Display Car parts that are category type 'Exhaust' here --}}
+                    <Exhaust-Component></Exhaust-Component>
                 </div>
             </div>
         </div>

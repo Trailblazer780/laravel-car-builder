@@ -35,6 +35,26 @@ class CarPartsSeeder extends Seeder
             'part_category' => 'Engine',
         ]);
 
+        // ---------------------------------------------------------------------- Transmission
+        $manual = Part::create([
+            'part_name' => 'Manual',
+            'part_description' => 'A manual transmission is a type of transmission that is operated by hand, using a lever or pedals.',
+            'part_category' => 'Transmission',
+        ]);
+
+        $sequential = Part::create([
+            'part_name' => 'Sequential',
+            'part_description' => 'A manual transmission that is sequential.',
+            'part_category' => 'Transmission',
+        ]);
+
+        $clutch = Part::create([
+            'part_name' => 'Stage 4 Racing Clutch',
+            'part_description' => 'A clutch is a device that holds the engine in place when the transmission is engaged.',
+            'part_category' => 'Transmission',
+        ]);
+
+
         // ---------------------------------------------------------------------- Brakes
         $brembo = Part::create([
             'part_name' => 'Brembo Brakes',
@@ -55,6 +75,43 @@ class CarPartsSeeder extends Seeder
             'part_category' => 'Suspension',
         ]);
 
+        $airRide = Part::create([
+            'part_name' => 'Air Ride',
+            'part_description' => 'A air ride is a type of Suspension modification to raise or lower the vehicle on demand',
+            'part_category' => 'Suspension',
+        ]);
+
+        // ---------------------------------------------------------------------- Exhaust
+        $catback = Part::create([
+            'part_name' => 'Catback',
+            'part_description' => 'A catback is a type of exhaust modification that increases the power of an engine by increasing the flow of exhaust out of the engine',
+            'part_category' => 'Exhaust',
+        ]);
+
+        $headers = Part::create([
+            'part_name' => 'Headers',
+            'part_description' => 'A header is a type of exhaust manifold modification',
+            'part_category' => 'Exhaust',
+        ]);
+
+        // ---------------------------------------------------------------------- Body
+        $vielside = Part::create([
+            'part_name' => 'Viel Side Body Kit',
+            'part_description' => 'A viel side body kit',
+            'part_category' => 'Body',
+        ]);
+
+        $carbonHood = Part::create([
+            'part_name' => 'Carbon Fibre Hood',
+            'part_description' => 'Carbon Fibre Hood',
+            'part_category' => 'Body',
+        ]);
+
+        $spoiler = Part::create([
+            'part_name' => 'Spoiler',
+            'part_description' => 'Increases aerodynamic performance',
+            'part_category' => 'Body',
+        ]);
 
         // ---------------------------------------------------------------------- Cars
         $car1 = Part::create([
