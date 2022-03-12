@@ -94,6 +94,7 @@ class PartController extends Controller
      */
     public function destroy(Part $part)
     {
-        //
+        $part->delete();
+        return redirect()->route('admin.parts.index');
     }
 }

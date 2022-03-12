@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Add Part:</div>
                 <div class="card-body">
-                    <form action="{{ route('admin.store') }}" method="post">
+                    <form action="{{ route('parts.store') }}" method="post">
                         {{ method_field('post') }}
                         @csrf
                         <div class="form-group row">
@@ -26,7 +26,6 @@
                         </div>
                         <div class="form-group row">
                             <label for="partCategory" class="col-md-4 col-form-label text-md-right">Part Category </label>
-                            {{-- make dropdown menu --}}
                             <div class="col-md-6">
                                 <select name="part_category" id="part_category" class="form-control">
                                     <option value="Car">Car</option>
@@ -37,9 +36,6 @@
                                     <option value="Transmission">Transmission</option>
                                     <option value="Exhaust">Exhaust</option>
                                 </select>
-                            {{-- <div class="col-md-6">
-                                <input id="partCategory" type="text" class="form-control" name="part_category"  required autocomplete="partCategory" autofocus>
-                            </div> --}}
                         </div>
 
                         <div class="form-group row">

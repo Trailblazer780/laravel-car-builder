@@ -24,21 +24,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // make route to car-builder
 // Route::get('/carbuilder/car-builder', 'App\Http\Controllers\CarBuilderController@index')->name('carbuilder.car-builder');
 
-// Route::get('/admin/parts', 'App\Http\Controllers\CarBuilderController@parts')->name('admin.parts');
 
-
-// create route to edit speicifc part
-
-// Route::get('/admin/edit/{id}', 'PartController@edit')->name('parts.edit');
-
+// Routes for part CRUD
 Route::get('/admin/add', 'Admin\PartController@create')->name('parts.add');
 Route::put('/admin/update', 'Admin\PartController@update')->name('parts.update');
+Route::post('/admin/add', 'Admin\PartController@store')->name('parts.store');
+Route::get('/admin/edit/{part}', 'Admin\PartController@edit')->name('parts.edit');
+Route::delete('/admin/destroy', 'Admin\PartController@destroy')->name('parts.destroy');
 
-Route::post('/admin/add', 'Admin\PartController@store')->name('admin.store');
 
-Route::delete('/admin/destroy', 'Admin\App\Http\Controllers\PartController@destroy')->name('parts.destroy');
-
-Route::get('/admin/edit/{id}', 'Admin\PartController@edit')->name('parts.edit');
 // ----------------------------------------------------------------------------- User Management
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
     // Now we add the routes
