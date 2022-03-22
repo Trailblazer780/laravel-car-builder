@@ -2,9 +2,7 @@
 
 @section('content')
 <div class="row justify-content-center">
-
-    {{-- display the build data --}}
-    <div class="col-md-12">
+    <div class="col-md-4">
         <div class="card">
             <div class="card-header">
                 <h4>Build #{{ $build->id }}</h4>
@@ -23,20 +21,87 @@
                                     <th>Build Car</th>
                                     <td>{{ $build->car }}</td>
                                 </tr>
-                                <tr>
-                                    <th>Engine Mod</th>
-                                    <td>
-                                        @foreach(explode(',', $build->engine_options) as $option)
-                                            {{ $option }}
-                                            <br>
-                                        @endforeach
-                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-
-
+        </div>
+        <div class="col-md-12" style="padding-bottom: 10px;">
+            <div class="card">
+                <div class="card-header text-center">Selected Car:</div>
+                <div class="card-body">
+                    <div>{{ $build->car }}</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">Engine Mods:</div>
+                <div class="card-body">
+                    @foreach(explode(',', $build->engine_options) as $option)
+                    @if($option != "")
+                        {{ $option }}
+                        <br>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">Transmission Mods:</div>
+                <div class="card-body">
+                    @foreach(explode(',', $build->transmission_options) as $option)
+                    @if($option != "")
+                        {{ $option }}
+                        <br>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">Suspension Mods:</div>
+                <div class="card-body">
+                    @foreach(explode(',', $build->suspension_options) as $option)
+                    @if($option != "")
+                        {{ $option }}
+                        <br>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">Brake Mods:</div>
+                <div class="card-body">
+                    @foreach(explode(',', $build->brakes_options) as $option)
+                    @if($option != "")
+                        {{ $option }}
+                        <br>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">Exhaust Mods:</div>
+                <div class="card-body">
+                    @foreach(explode(',', $build->exhaust_options) as $option)
+                    @if($option != "")
+                        {{ $option }}
+                        <br>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">Body Mods:</div>
+                <div class="card-body">
+                    @foreach(explode(',', $build->body_options) as $option)
+                    @if($option != "")
+                        {{ $option }}
+                        <br>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </div>
 @endsection
