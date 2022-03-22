@@ -1,6 +1,7 @@
 @extends('layouts.app')
-
+{{-- <?php use App\Http\Controllers\Admin\PartController; ?> --}}
 @section('content')
+
 <div class="row justify-content-center">
     <div class="col-md-4">
         <div class="card">
@@ -21,6 +22,14 @@
                                     <th>Build Car</th>
                                     <td>{{ $build->car }}</td>
                                 </tr>
+                                <tr>
+                                    <th>Client Name:</th>
+                                    <td>{{ $build->name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Client Email:</th>
+                                    <td>{{ $build->email }}</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -32,6 +41,7 @@
                 <div class="card-header text-center">Selected Car:</div>
                 <div class="card-body">
                     <div>{{ $build->car }}</div>
+                    {{-- <div>{{ PartController::getPart(15); }} </div> --}}
                 </div>
             </div>
             <div class="card">

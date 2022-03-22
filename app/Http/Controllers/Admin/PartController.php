@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Part;
+use App\Models\Build;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,6 +25,11 @@ class PartController extends Controller
     {
         $parts = Part::all();
         return view('admin.parts')->with('parts', $parts);
+    }
+
+    public function builds(){
+        $builds = Build::all();
+        return view('admin.builds')->with('builds', $builds);
     }
 
     /**
@@ -101,4 +107,23 @@ class PartController extends Controller
         $part->delete();
         return redirect()->route('admin.parts.index');
     }
+
+        /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Part  $part
+     * @return \Illuminate\Http\Response
+     */
+    public function destroyBuild(Build $build)
+    {
+        $build->delete();
+        return redirect()->route('admin.builds');
+    }
+
+    // public static function getPart($id)
+    // {
+    //     $part = Part::find($id);
+
+    //     return $part;
+    // }
 }

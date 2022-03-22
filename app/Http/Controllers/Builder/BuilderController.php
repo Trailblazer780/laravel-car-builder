@@ -38,6 +38,8 @@ class BuilderController extends Controller
     public function store(Request $request)
     {
         $build = new Build();
+        $build->email = request('email');
+        $build->name = request('name');
         $build->car = request('car');
         if(request('engine')!= null){
             // loop through engine options and add them to the build

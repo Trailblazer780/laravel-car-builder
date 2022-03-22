@@ -44,6 +44,9 @@ Route::post('/admin/add', 'Admin\PartController@store')->name('parts.store');
 Route::get('/admin/edit/{part}', 'Admin\PartController@edit')->name('parts.edit');
 Route::delete('/admin/destroy/{part}', 'Admin\PartController@destroy')->name('parts.destroy');
 
+Route::get('/admin/builds', 'Admin\PartController@builds')->name('admin.builds');
+Route::delete('/admin/destroyBuild/{build}', 'Admin\PartController@destroyBuild')->name('build.destroy');
+
 // ----------------------------------------------------------------------------- Parts Management
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
     // Now we add the routes

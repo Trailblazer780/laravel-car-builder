@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('builds', function (Blueprint $table) {
             $table->id();
+            $table->string('email');
+            $table->string('name');
             $table->string('car');
             $table->string('engine_options');
             $table->string('brakes_options');
