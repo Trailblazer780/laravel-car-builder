@@ -17,13 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('email');
             $table->string('name');
-            $table->string('car');
-            $table->string('engine_options');
-            $table->string('brakes_options');
-            $table->string('suspension_options');
-            $table->string('body_options');
-            $table->string('exhaust_options');
-            $table->string('transmission_options');
+            $table->string('car')->nullable();
+            $table->string('engine_options')->nullable();
+            $table->string('brakes_options')->nullable();
+            $table->string('suspension_options')->nullable();
+            $table->string('body_options')->nullable();
+            $table->string('exhaust_options')->nullable();
+            $table->string('transmission_options')->nullable();
             $table->timestamps();
         });
     }
