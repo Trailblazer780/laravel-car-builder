@@ -3,7 +3,7 @@
 @section('content')
 <div class="row justify-content-center">
     <div class="col-md-4">
-    <form action="" method="POST">
+    <form action="{{ route('builder.store') }}" method="POST">
         @csrf
         <div class="col-md-12" style="padding-bottom: 10px">
             <div class="card">
@@ -11,12 +11,12 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required placeholder="Enter email">
                     </div>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                        <input type="text" class="form-control" id="name" name="name" required placeholder="Enter name">
                     </div>
                 </div>
             </div>
@@ -77,7 +77,9 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Build Car</button>
+        </div>
     </form>
     </div>
 </div>

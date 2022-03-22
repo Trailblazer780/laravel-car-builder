@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Car Parts:</div>
                 <div class="card-body">
@@ -15,6 +15,8 @@
                                 <th scope="col">Part ID</th>
                                 <th scope="col">Part Name</th>
                                 <th scope="col">Part Category</th>
+                                <th scope="col">Part Description</th>
+                                <th scope="col">Edit/Delete</th>
                             </tr>
                         </thead>
                             <tbody>
@@ -23,6 +25,7 @@
                                         <th>{{ $part->id }}</th>
                                         <td>{{ $part->part_name }}</td>
                                         <td>{{ $part->part_category }}</td>
+                                        <td>{{ $part->part_description }}</td>
                                         {{-- <td>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</td> --}}
                                         <td>
                                         <a href="{{ route('parts.edit', $part->id )}}"><button class="btn btn-info text-white float-left mr-2" type="submit">Edit</button></a>

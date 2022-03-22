@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Builder;
 use App\Http\Controllers\Controller;
 use App\Models\Build;
 use Illuminate\Http\Request;
+use SebastianBergmann\Environment\Console;
 
 class BuilderController extends Controller
 {
@@ -25,7 +26,7 @@ class BuilderController extends Controller
      */
     public function create()
     {
-        //
+        // 
     }
 
     /**
@@ -36,7 +37,49 @@ class BuilderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $build = new Build();
+        $build->car = request('car');
+        if(request('engine')!= null){
+            // loop through engine options and add them to the build
+            foreach(request('engine') as $engine){
+                $build->engine_options = $build->engine_options . $engine . ',';
+            }
+        }
+        if(request('body')!= null){
+            // loop through brakes options and add them to the build
+            foreach(request('body') as $body){
+                $build->body_options = $build->body_options . $body . ',';
+            }
+        }
+        if(request('suspension')!= null){
+            // loop through brakes options and add them to the build
+            foreach(request('suspension') as $suspension){
+                $build->suspension_options = $build->suspension_options . $suspension . ',';
+            }
+        }
+        if(request('brake')!= null){
+            // loop through brakes options and add them to the build
+            foreach(request('brake') as $brakes){
+                $build->brakes_options = $build->brakes_options . $brakes . ',';
+            }
+        }
+        if(request('transmission')!= null){
+            // loop through exhaust options and add them to the build
+            foreach(request('transmission') as $transmission){
+                $build->transmission_options = $build->transmission_options . $transmission . ',';
+            }
+        }
+        if(request('exhaust')!= null){
+            // loop through exhaust options and add them to the build
+            foreach(request('exhaust') as $exhaust){
+                $build->exhaust_options = $build->exhaust_options . $exhaust . ',';
+            }
+        }
+        $build->save();
+        // dump($build);
+        // redirect to a view page with the build
+        return redirect('/builder/fullbuild/'.$build->id);
+
     }
 
     /**
@@ -47,7 +90,8 @@ class BuilderController extends Controller
      */
     public function show(Build $build)
     {
-        //
+        // show view with build
+        return view('builder.fullbuild')->with('build', $build);
     }
 
     /**

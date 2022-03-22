@@ -28866,8 +28866,8 @@ var render = function () {
         _vm._l(_vm.parts, function (part) {
           return _c("div", { key: part }, [
             _c("input", {
-              attrs: { type: "checkbox" },
-              domProps: { value: part.id },
+              attrs: { type: "checkbox", name: "body[]" },
+              domProps: { value: part.part_name },
             }),
             _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
           ])
@@ -28908,8 +28908,8 @@ var render = function () {
         _vm._l(_vm.parts, function (part) {
           return _c("div", { key: part }, [
             _c("input", {
-              attrs: { type: "checkbox" },
-              domProps: { value: part.id },
+              attrs: { type: "checkbox", name: "brake[]" },
+              domProps: { value: part.part_name },
             }),
             _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
           ])
@@ -28948,11 +28948,13 @@ var render = function () {
         _c("ul", [
           _c(
             "select",
-            { attrs: { name: "Car" } },
+            { attrs: { name: "car" } },
             _vm._l(_vm.parts, function (part) {
-              return _c("option", { key: part, domProps: { value: part.id } }, [
-                _vm._v(_vm._s(part.part_name)),
-              ])
+              return _c(
+                "option",
+                { key: part, domProps: { value: part.part_name } },
+                [_vm._v(_vm._s(part.part_name))]
+              )
             }),
             0
           ),
@@ -28992,8 +28994,8 @@ var render = function () {
         _vm._l(_vm.parts, function (part) {
           return _c("div", { key: part }, [
             _c("input", {
-              attrs: { type: "checkbox" },
-              domProps: { value: part.id },
+              attrs: { type: "checkbox", name: "engine[]" },
+              domProps: { value: part.part_name },
             }),
             _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
           ])
@@ -29082,8 +29084,8 @@ var render = function () {
         _vm._l(_vm.parts, function (part) {
           return _c("div", { key: part }, [
             _c("input", {
-              attrs: { type: "checkbox" },
-              domProps: { value: part.id },
+              attrs: { type: "checkbox", name: "exhaust[]" },
+              domProps: { value: part.part_name },
             }),
             _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
           ])
@@ -29124,8 +29126,8 @@ var render = function () {
         _vm._l(_vm.parts, function (part) {
           return _c("div", { key: part }, [
             _c("input", {
-              attrs: { type: "checkbox" },
-              domProps: { value: part.id },
+              attrs: { type: "checkbox", name: "suspension[]" },
+              domProps: { value: part.part_name },
             }),
             _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
           ])
@@ -29166,8 +29168,8 @@ var render = function () {
         _vm._l(_vm.parts, function (part) {
           return _c("div", { key: part }, [
             _c("input", {
-              attrs: { type: "checkbox" },
-              domProps: { value: part.id },
+              attrs: { type: "checkbox", name: "transmission[]" },
+              domProps: { value: part.part_name },
             }),
             _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
           ])

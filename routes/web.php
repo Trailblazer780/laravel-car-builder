@@ -23,6 +23,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // --------------------------------------------------------------------------- Routes for Car Builder
 Route::get('/builder', 'App\Http\Controllers\Builder\BuilderController@index')->name('builder');
+Route::post('/builder/store', 'App\Http\Controllers\Builder\BuilderController@store')->name('builder.store');
+Route::get('/builder/fullbuild/{build}', 'App\Http\Controllers\Builder\BuilderController@show')->name('builder.fullbuild');
 
 // --------------------------------------------------------------------------- Routes for Parts
 Route::get('/api/parts', 'App\Http\Controllers\APIController@index')->name('api.parts');
@@ -42,7 +44,7 @@ Route::post('/admin/add', 'Admin\PartController@store')->name('parts.store');
 Route::get('/admin/edit/{part}', 'Admin\PartController@edit')->name('parts.edit');
 Route::delete('/admin/destroy/{part}', 'Admin\PartController@destroy')->name('parts.destroy');
 
-// ----------------------------------------------------------------------------- User Management
+// ----------------------------------------------------------------------------- Parts Management
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
     // Now we add the routes
     Route::resource('/parts', 'PartController', ['except'=>['show', 'create', 'store']]);
