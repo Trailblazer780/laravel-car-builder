@@ -25,16 +25,16 @@
                                         <th>{{ $part->id }}</th>
                                         <td>{{ $part->part_name }}</td>
                                         <td>{{ $part->part_category }}</td>
-                                        <td>{{ $part->part_description }}</td>
-                                        {{-- <td>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</td> --}}
+                                        <td style="word-wrap: break-word; max-width: 700px;">{{ $part->part_description }}</td>
                                         <td>
-                                        <a href="{{ route('parts.edit', $part->id )}}"><button class="btn btn-info text-white float-left mr-2" type="submit">Edit</button></a>
+                                        <span style="display: inline;"><a href="{{ route('parts.edit', $part->id )}}"><button class="btn btn-info text-white float-left mr-2" type="submit">Edit</button></a>
                                         <form action="{{ route('parts.destroy', $part)}}" method="post" class="float-left" style="display: inline">
                                             {{ method_field('DELETE')}}
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $part->id }}">
                                             <button class="btn btn-danger text-white" type="submit">Delete</button></a>
                                         </form>
+                                        </span>
                                         </td>
                                     </tr>
                                 @endforeach
