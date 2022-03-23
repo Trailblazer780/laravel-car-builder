@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <ul>
                     <select name="car">
-                        <option v-bind:key="part" v-for="part in parts" v-bind:value="part.part_name">{{ part.part_name }}</option>
+                        <option v-bind:key="part" v-for="part in parts" v-bind:value="part.id">{{ part.part_name }}</option>
                     </select>
                 </ul>
             </div>

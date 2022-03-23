@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<?php use App\Http\Controllers\Admin\PartController; ?>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -22,7 +22,7 @@
                                         <th>{{ $build->id }}</th>
                                         <td>{{ $build->name }}</td>
                                         <td>{{ $build->email }}</td>
-                                        <td>{{ $build->car }}</td>
+                                        <td>{{ PartController::getPartName($build->car); }}</td>
                                         <td>
                                         <a href="{{ route('builder.fullbuild', $build->id )}}"><button class="btn btn-info text-white float-left mr-2" type="submit">View</button></a>
                                         <form action="{{ route('build.destroy', $build)}}" method="post" class="float-left" style="display: inline">

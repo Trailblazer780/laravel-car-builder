@@ -1,5 +1,5 @@
 @extends('layouts.app')
-{{-- <?php use App\Http\Controllers\Admin\PartController; ?> --}}
+<?php use App\Http\Controllers\Admin\PartController; ?>
 @section('content')
 
 <div class="row justify-content-center">
@@ -21,7 +21,7 @@
                                     </tr>
                                     <tr>
                                         <th>Build Car</th>
-                                        <td>{{ $build->car }}</td>
+                                        <td>{{ PartController::getPartName($build->car); }}</td>
                                     </tr>
                                     <tr>
                                         <th>Client Name:</th>
@@ -43,8 +43,11 @@
                 <div class="card">
                     <div class="card-header text-center">Selected Car:</div>
                     <div class="card-body">
-                        <div>{{ $build->car }}</div>
-                        {{-- <div>{{ PartController::getPart(15); }} </div> --}}
+                        {{-- <div>{{ $build->car }}</div> --}}
+                        <div>{{ PartController::getPartName($build->car); }} </div>
+                        <hr>
+                        <div>Description:</div>
+                        <div>{{ PartController::getPartDesc($build->car); }} </div>
                     </div>
                 </div>
             </div>
@@ -52,10 +55,18 @@
                 <div class="card">
                     <div class="card-header text-center">Engine Mods:</div>
                     <div class="card-body">
+                        @if(strlen($build->engine_options) <= 0)
+                        <div class="text-center">There are no engine mods selected on this build.</div>
+                        @endif
                         @foreach(explode(',', $build->engine_options) as $option)
+                        {{-- check to see if there are options --}}
                         @if($option != "")
-                            {{ $option }}
+                            <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
+                            {{-- {{ PartController::getPartName($option); }} --}}
+                            <div>Description:</div>
+                            <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
+                            <hr>
                         @endif
                         @endforeach
                     </div>
@@ -65,10 +76,17 @@
                 <div class="card">
                     <div class="card-header text-center">Transmission Mods:</div>
                     <div class="card-body">
+                        @if(strlen($build->transmission_options) <= 0)
+                        <div class="text-center">There are no transmission mods selected on this build.</div>
+                        @endif
                         @foreach(explode(',', $build->transmission_options) as $option)
                         @if($option != "")
-                            {{ $option }}
+                            <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
+                            {{-- {{ PartController::getPartName($option); }} --}}
+                            <div>Description:</div>
+                            <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
+                            <hr>
                         @endif
                         @endforeach
                     </div>
@@ -78,10 +96,17 @@
                 <div class="card">
                     <div class="card-header text-center">Suspension Mods:</div>
                     <div class="card-body">
+                        @if(strlen($build->suspension_options) <= 0)
+                        <div class="text-center">There are no suspension mods selected on this build.</div>
+                        @endif
                         @foreach(explode(',', $build->suspension_options) as $option)
                         @if($option != "")
-                            {{ $option }}
+                            <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
+                            {{-- {{ PartController::getPartName($option); }} --}}
+                            <div>Description:</div>
+                            <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
+                            <hr>
                         @endif
                         @endforeach
                     </div>
@@ -91,10 +116,17 @@
                 <div class="card">
                     <div class="card-header text-center">Brake Mods:</div>
                     <div class="card-body">
+                        @if(strlen($build->brakes_options) <= 0)
+                        <div class="text-center">There are no brake mods selected on this build.</div>
+                        @endif
                         @foreach(explode(',', $build->brakes_options) as $option)
                         @if($option != "")
-                            {{ $option }}
+                            <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
+                            {{-- {{ PartController::getPartName($option); }} --}}
+                            <div>Description:</div>
+                            <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
+                            <hr>
                         @endif
                         @endforeach
                     </div>
@@ -104,10 +136,17 @@
             <div class="card">
                 <div class="card-header text-center">Exhaust Mods:</div>
                 <div class="card-body">
+                    @if(strlen($build->exhaust_options) <= 0)
+                    <div class="text-center">There are no exhaust mods selected on this build.</div>
+                    @endif
                     @foreach(explode(',', $build->exhaust_options) as $option)
                     @if($option != "")
-                        {{ $option }}
-                        <br>
+                    <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
+                    {{-- {{ PartController::getPartName($option); }} --}}
+                    <div>Description:</div>
+                    <div>{{ PartController::getPartDesc($option); }}</div>
+                    <br>
+                    <hr>
                     @endif
                     @endforeach
                 </div>
@@ -116,10 +155,17 @@
                 <div class="card">
                     <div class="card-header text-center">Body Mods:</div>
                     <div class="card-body">
+                        @if(strlen($build->body_options) <= 0)
+                        <div class="text-center">There are no body mods selected on this build.</div>
+                        @endif
                         @foreach(explode(',', $build->body_options) as $option)
                         @if($option != "")
-                            {{ $option }}
+                            <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
+                            {{-- {{ PartController::getPartName($option); }} --}}
+                            <div>Description:</div>
+                            <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
+                            <hr>
                         @endif
                         @endforeach
                     </div>

@@ -120,10 +120,17 @@ class PartController extends Controller
         return redirect()->route('admin.builds');
     }
 
-    // public static function getPart($id)
-    // {
-    //     $part = Part::find($id);
+    public static function getPartName($id)
+    {
+        $part = Part::find($id);
+        $name = $part->part_name;
+        return $name;
+    }
 
-    //     return $part;
-    // }
+    public static function getPartDesc($id)
+    {
+        $part = Part::find($id);
+        $desc = $part->part_description;
+        return $desc;
+    }
 }

@@ -26,12 +26,6 @@
                 <a class="navbar-brand" href="{{ url('/builder') }}">
                     {{ config('Builder', 'Builder') }}
                 </a>
-                <a class="navbar-brand" href="{{ url('/admin/parts') }}">
-                    {{ config('Parts', 'Parts') }}
-                </a>
-                <a class="navbar-brand" href="{{ url('/admin/builds') }}">
-                    {{ config('Builds', 'Builds') }}
-                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -64,6 +58,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    @if (Auth::user()->isAdmin())
+                                    <a class="dropdown-item" href="{{ url('/admin/parts') }}">
+                                        {{-- {{ config('Parts', 'Parts') }} --}}
+                                        Parts
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('/admin/builds') }}">
+                                        {{ config('Builds', 'Builds') }}
+                                    </a>
+                                    @endif
+
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
