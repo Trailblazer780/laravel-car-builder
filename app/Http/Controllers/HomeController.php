@@ -23,6 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // if user is admin direct to admin dashboard
+        if (auth()->user()->hasRole('admin')) {
+            return redirect()->route('admin.parts.index');
+        }
+        else {
+            return redirect()->route('builder');
+        }
+
+        // return view('home');
     }
 }
