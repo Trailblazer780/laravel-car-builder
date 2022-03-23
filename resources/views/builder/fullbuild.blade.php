@@ -43,7 +43,6 @@
                 <div class="card">
                     <div class="card-header text-center">Selected Car:</div>
                     <div class="card-body">
-                        {{-- <div>{{ $build->car }}</div> --}}
                         <div>{{ PartController::getPartName($build->car); }} </div>
                         <hr>
                         <div>Description:</div>
@@ -62,7 +61,6 @@
                         {{-- check to see if there are options --}}
                         @if($option != "")
                             <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
-                            {{-- {{ PartController::getPartName($option); }} --}}
                             <div>Description:</div>
                             <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
@@ -82,7 +80,6 @@
                         @foreach(explode(',', $build->transmission_options) as $option)
                         @if($option != "")
                             <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
-                            {{-- {{ PartController::getPartName($option); }} --}}
                             <div>Description:</div>
                             <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
@@ -102,7 +99,6 @@
                         @foreach(explode(',', $build->suspension_options) as $option)
                         @if($option != "")
                             <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
-                            {{-- {{ PartController::getPartName($option); }} --}}
                             <div>Description:</div>
                             <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
@@ -122,7 +118,6 @@
                         @foreach(explode(',', $build->brakes_options) as $option)
                         @if($option != "")
                             <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
-                            {{-- {{ PartController::getPartName($option); }} --}}
                             <div>Description:</div>
                             <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
@@ -142,7 +137,6 @@
                     @foreach(explode(',', $build->exhaust_options) as $option)
                     @if($option != "")
                     <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
-                    {{-- {{ PartController::getPartName($option); }} --}}
                     <div>Description:</div>
                     <div>{{ PartController::getPartDesc($option); }}</div>
                     <br>
@@ -161,7 +155,6 @@
                         @foreach(explode(',', $build->body_options) as $option)
                         @if($option != "")
                             <div>Part: <strong>{{ PartController::getPartName($option); }}</strong></div>
-                            {{-- {{ PartController::getPartName($option); }} --}}
                             <div>Description:</div>
                             <div>{{ PartController::getPartDesc($option); }}</div>
                             <br>
