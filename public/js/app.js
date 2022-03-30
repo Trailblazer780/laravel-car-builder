@@ -28869,7 +28869,14 @@ var render = function () {
               attrs: { type: "checkbox", name: "body[]" },
               domProps: { value: part.id },
             }),
-            _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
+            _vm._v(
+              " " +
+                _vm._s(part.part_name) +
+                " | " +
+                _vm._s(part.part_description) +
+                " "
+            ),
+            _c("hr"),
           ])
         }),
         0
@@ -28911,7 +28918,14 @@ var render = function () {
               attrs: { type: "checkbox", name: "brake[]" },
               domProps: { value: part.id },
             }),
-            _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
+            _vm._v(
+              " " +
+                _vm._s(part.part_name) +
+                " | " +
+                _vm._s(part.part_description) +
+                " "
+            ),
+            _c("hr"),
           ])
         }),
         0
@@ -28995,7 +29009,14 @@ var render = function () {
               attrs: { type: "checkbox", name: "engine[]" },
               domProps: { value: part.id },
             }),
-            _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
+            _vm._v(
+              " " +
+                _vm._s(part.part_name) +
+                " | " +
+                _vm._s(part.part_description) +
+                " "
+            ),
+            _c("hr"),
           ])
         }),
         0
@@ -29085,7 +29106,14 @@ var render = function () {
               attrs: { type: "checkbox", name: "exhaust[]" },
               domProps: { value: part.id },
             }),
-            _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
+            _vm._v(
+              " " +
+                _vm._s(part.part_name) +
+                " | " +
+                _vm._s(part.part_description) +
+                " "
+            ),
+            _c("hr"),
           ])
         }),
         0
@@ -29127,7 +29155,14 @@ var render = function () {
               attrs: { type: "checkbox", name: "suspension[]" },
               domProps: { value: part.id },
             }),
-            _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
+            _vm._v(
+              " " +
+                _vm._s(part.part_name) +
+                " | " +
+                _vm._s(part.part_description) +
+                " "
+            ),
+            _c("hr"),
           ])
         }),
         0
@@ -29169,7 +29204,14 @@ var render = function () {
               attrs: { type: "checkbox", name: "transmission[]" },
               domProps: { value: part.id },
             }),
-            _vm._v(" " + _vm._s(part.part_name) + " | \n            "),
+            _vm._v(
+              " " +
+                _vm._s(part.part_name) +
+                " | " +
+                _vm._s(part.part_description) +
+                " "
+            ),
+            _c("hr"),
           ])
         }),
         0

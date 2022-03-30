@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div v-bind:key="part" v-for="part in parts">
-                    <input type="checkbox" name="exhaust[]" v-bind:value="part.id"> {{ part.part_name }} | 
+                    <input type="checkbox" name="exhaust[]" v-bind:value="part.id"> {{ part.part_name }} | {{ part.part_description }} <hr>
                 </div>
             </div>
         </div>
